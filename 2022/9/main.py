@@ -9,12 +9,13 @@ mouvement = {
 }
 
 rope = []
-for i in range(10):
+for _ in range(10):
     rope.append(Point(0, 0))
 
 case1 = list(map(lambda x: x.split(), input1.split('\n')))
 case2 = list(map(lambda x: x.split(), input2.split('\n')))
 case3 = list(map(lambda x: x.split(), input3.split('\n')))
+
 
 def run(case):
     positionHistory = {rope[-1].get()}
@@ -26,5 +27,5 @@ def run(case):
             positionHistory.add(rope[-1].get())
     return positionHistory
 
-case2History = run(case2)
-print(len(case2History))
+
+print(run(case2))
